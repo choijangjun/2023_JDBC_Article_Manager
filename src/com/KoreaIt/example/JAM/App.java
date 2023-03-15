@@ -30,7 +30,6 @@ public class App {
 
 				if (cmd.equals("member join")) {
 					memberController.doJoin();
-					
 				} else if (cmd.equals("article write")) {
 					articleController.doWrite();
 
@@ -44,7 +43,7 @@ public class App {
 					articleController.doModify(cmd);
 
 				} else if (cmd.startsWith("article delete ")) {
-					articleController.delete(cmd);
+					articleController.doDelete(cmd);
 
 				}
 
