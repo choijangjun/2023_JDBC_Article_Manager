@@ -1,13 +1,12 @@
 package com.KoreaIt.example.JAM.controller;
 
 import java.sql.Connection;
-import java.util.List;
 import java.util.Scanner;
 
-import com.KoreaIt.example.JAM.Member;
-import com.KoreaIt.example.JAM.dto.Article;
+import com.KoreaIt.example.JAM.dto.Member;
 import com.KoreaIt.example.JAM.service.MemberService;
 import com.KoreaIt.example.JAM.session.Session;
+import com.KoreaIt.example.JAM.util.Utill;
 
 public class MemberController {
 
@@ -166,7 +165,7 @@ public class MemberController {
 		System.out.println("== 회원 프로필 ==");
 
 		System.out.printf("로그인 아이디 : %s\n", Session.loginedMember.loginId);
-		System.out.printf("가입일자 : %s\n", Session.loginedMember.regDate);
+		System.out.printf("가입일자 : %s\n", Utill.datetimeFormat(Session.loginedMember.regDate));
 		System.out.printf("회원 이름 : %s\n", Session.loginedMember.name);
 		
 		

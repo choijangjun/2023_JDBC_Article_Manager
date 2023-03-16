@@ -1,6 +1,6 @@
 package com.KoreaIt.example.JAM.session;
 
-import com.KoreaIt.example.JAM.Member;
+import com.KoreaIt.example.JAM.dto.Member;
 
 public class Session {
 	

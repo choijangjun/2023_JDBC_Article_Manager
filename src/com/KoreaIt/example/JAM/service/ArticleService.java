@@ -1,12 +1,14 @@
 package com.KoreaIt.example.JAM.service;
 
 import java.sql.Connection;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 import com.KoreaIt.example.JAM.dao.ArticleDao;
 import com.KoreaIt.example.JAM.dto.Article;
+import com.KoreaIt.example.JAM.session.Session;
 
 public class ArticleService {
 
@@ -16,8 +18,8 @@ public class ArticleService {
 		this.articleDao = new ArticleDao(conn);
 	}
 
-	public int doWrite(String title, String body) {
-		return articleDao.doWrite(title, body);
+	public int doWrite(String title, String body, int loginedMemberId) {
+		return articleDao.doWrite(title, body, loginedMemberId);
 	}
 	
 	public List<Article> getArticles(){

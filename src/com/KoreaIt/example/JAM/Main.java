@@ -1,6 +1,4 @@
-package com.KoreaIt.example.JAM.dto;
-
-import com.KoreaIt.example.JAM.App;
+package com.KoreaIt.example.JAM;
 
 public class Main {
 	public static void main(String[] args) {
