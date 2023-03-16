@@ -1,4 +1,4 @@
-package com.KoreaIt.example.JAM;
+package com.KoreaIt.example.JAM.dto;
 
 import java.time.LocalDateTime;
 import java.util.Map;

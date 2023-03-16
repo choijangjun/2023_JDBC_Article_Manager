@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.util.List;
 import java.util.Scanner;
 
-import com.KoreaIt.example.JAM.Article;
+import com.KoreaIt.example.JAM.dto.Article;
 import com.KoreaIt.example.JAM.service.ArticleService;
 
 public class ArticleController {
