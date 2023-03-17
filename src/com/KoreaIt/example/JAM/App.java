@@ -42,8 +42,8 @@ public class App {
 				} else if (cmd.equals("article write")) {
 					articleController.doWrite();
 
-				} else if (cmd.equals("article list")) {
-					articleController.showList();
+				} else if (cmd.startsWith("article list")) {
+					articleController.showList(cmd);
 
 				} else if (cmd.startsWith("article detail ")) {
 					articleController.showDetail(cmd);
@@ -54,6 +54,9 @@ public class App {
 				} else if (cmd.startsWith("article delete ")) {
 					articleController.doDelete(cmd);
 
+				} else {
+					System.out.println("존재하지 않는 명령어입니다.");
+					continue;
 				}
 
 				if (cmd.equals("exit")) {

@@ -1,14 +1,12 @@
 package com.KoreaIt.example.JAM.service;
 
 import java.sql.Connection;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 import com.KoreaIt.example.JAM.dao.ArticleDao;
 import com.KoreaIt.example.JAM.dto.Article;
-import com.KoreaIt.example.JAM.session.Session;
 
 public class ArticleService {
 
@@ -22,9 +20,9 @@ public class ArticleService {
 		return articleDao.doWrite(title, body, loginedMemberId);
 	}
 	
-	public List<Article> getArticles(){
+	public List<Article> getArticles(String searchKeyword){
 		
-		List<Map<String, Object>> articleListMap = articleDao.getArticles();
+		List<Map<String, Object>> articleListMap = articleDao.getArticles(searchKeyword);
 		
 		List<Article> articles = new ArrayList<>();
 		
@@ -46,6 +44,8 @@ public class ArticleService {
 		return new Article(articleMap);
 	}
 
+	
+
 	public int getArticleCount(int id) {
 		return articleDao.getArticleCount(id);
 	}
@@ -56,5 +56,12 @@ public class ArticleService {
 
 	public void doDelete(int id) {
 		articleDao.doDelete(id);
+	}
+
+	public int addviewCount(int id) {
+		
+		
+		return articleDao.addviewCount(id);
+		
 	}
 }
